@@ -3,3 +3,4 @@
 *.userprefs
 Library
 Temp
+.DS_Store

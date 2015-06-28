@@ -33,7 +33,11 @@ public class InputReceiver : InputBehaviour
 		}
 		else
 		{
+			#if UNITY_5_0 || UNITY_4_6_3	// 4.6.3、5.0
+			transform.position = (Vector2)eventData.worldPosition;
+			#else 						// 4.6.4以降、5.1以降
 			transform.position = (Vector2)eventData.pointerCurrentRaycast.worldPosition;
+			#endif
 		}
 	}
 
